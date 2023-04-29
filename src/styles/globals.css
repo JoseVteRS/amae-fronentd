@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.diagonal--light::after {
+  content: "";
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  @apply bg-white;
+}
+
+.diagonal--gray::after {
+  content: "";
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  @apply bg-gray-100;
+}
+
+.diagonal--dark::after {
+  content: "";
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  @apply bg-slate-800;
+}

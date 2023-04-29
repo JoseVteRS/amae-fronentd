@@ -1,0 +1,18 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  &__background--color {
+    @apply bg-white backdrop-blur-md shadow-lg;
+  }
+
+  &__background--transparent {
+    background-color: transparent;
+  }
+  .active {
+    @apply text-orange-300
+  }
+}
