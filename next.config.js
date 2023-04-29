@@ -2,29 +2,34 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    // domains: ['images.pexels.com', 'images.unsplash.com', 'localhost'],
+    domains: ['images.pexels.com', 'images.unsplash.com', 'localhost', 'amae-backend-production.up.railway.app'],
     remotePatterns:[
       {
         protocol: "https",
         hostname: 'images.pexels.com',
-        // opcionales pero con mayor seguridad
         port: "",
         pathname: '/photos/**'
       },
       {
         protocol: "https",
         hostname: 'images.unsplash.com',
-        // opcionales pero con mayor seguridad
         port: "",
         pathname: '/img/**'
       },
       {
         protocol: "http",
         hostname: 'localhost',
-        // opcionales pero con mayor seguridad
         port: "1337",
         pathname: '/uploads/**'
-      }
+      },
+      // {
+      //   protocol: "https",
+      //   hostname: 'amae-backend-production.up.railway.app',
+      //   port: "80",
+      //   pathname: '/uploads/**'
+      // }
+
+      
     ]
   },
 }

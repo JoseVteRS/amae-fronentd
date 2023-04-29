@@ -14,7 +14,7 @@ export const GalleryItem = ({  photo }: GalleryItemProps) => {
   return (
     <div className="w-full">
       <Image
-        src={`http://localhost:1337${url}`}
+        src={`https://amae-backend-production.up.railway.app${url}`}
         alt=""
         width={width}
         height={height} 

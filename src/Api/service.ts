@@ -3,7 +3,7 @@
 export class Service {
     async getAll() {
         try {
-            const url = 'http://localhost:1337/api/services';
+            const url = 'https://amae-backend-production.up.railway.app/api/services';
 
             const response = await fetch(url);
             const data = await response.json();

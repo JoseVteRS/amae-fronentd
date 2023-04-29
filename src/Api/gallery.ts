@@ -5,7 +5,7 @@ export class Gallery {
     async getAll(): Promise<MappedGallery[]> {
         try {
 
-            const url = 'http://localhost:1337/api/galleries?populate=Thumbnail';
+            const url = 'https://amae-backend-production.up.railway.app/api/galleries?populate=Thumbnail';
             const response = await fetch(url);
             const data = await response.json();
 
@@ -27,7 +27,7 @@ export class Gallery {
             const populate = 'populate=*';
             const params = `${filters}&${populate}`;
             
-            const url = `http://localhost:1337/api/galleries?${params}`;
+            const url = `https://amae-backend-production.up.railway.app/api/galleries?${params}`;
             const response = await fetch(url);
             const data = await response.json();
 

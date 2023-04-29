@@ -3,7 +3,7 @@ export class Photo {
     async getAll(slug: string): Promise<any> {
         try {
 
-            const url = `http://localhost:1337/api/photos?filters[gallery][slug][$eqi]=${slug}&populate=*`;
+            const url = `https://amae-backend-production.up.railway.app/api/photos?filters[gallery][slug][$eqi]=${slug}&populate=*`;
             const response = await fetch(url);
             const data = await response.json();
 

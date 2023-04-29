@@ -20,7 +20,7 @@ export const Gallery = ({ galleries }: { galleries: any }) => {
               className="relative w-full h-48 overflow-hidden rounded shadow-md transform hover:scale-105 transition duration-300 ease-in-out"
             >
               <Image
-                src={`http://localhost:1337${gallery.thumbnail}`}
+                src={`https://amae-backend-production.up.railway.app${gallery.thumbnail}`}
                 alt={gallery.title}
                 fill
                 style={{ objectFit: "cover", objectPosition: "center" }}

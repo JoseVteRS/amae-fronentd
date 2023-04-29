@@ -19,7 +19,7 @@ const abhaya = Abhaya_Libre({
 const galleryImages = (images: []) => {
   if (!images || images.length < 0) return [];
   return images.map((image: any) => ({
-    src: `http://localhost:1337${image.attributes.url}`,
+    src: `https://amae-backend-production.up.railway.app${image.attributes.url}`,
     width: image.attributes.width,
     height: image.attributes.height,
   }));
@@ -38,7 +38,7 @@ const GalleryPage = ({ responseGallery }: { responseGallery: any }) => {
       <MainLayout>
         <HeaderWithImage
           title={responseGallery.attributes.title}
-          imageSrc={`http://localhost:1337${responseGallery.attributes.Thumbnail?.data.attributes.url}`}
+          imageSrc={`https://amae-backend-production.up.railway.app${responseGallery.attributes.Thumbnail?.data.attributes.url}`}
           className="diagonal"
         />
 
