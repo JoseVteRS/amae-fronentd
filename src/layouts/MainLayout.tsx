@@ -3,6 +3,8 @@ import { Nunito } from "next/font/google";
 
 import style from "./MainLayout.module.scss";
 import { Footer } from "@/components/Common/Footer";
+import { MobileMenu } from "@/components/Common/MobileMenu";
+import { menuLinks } from "@/utils/menuLinks";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -16,7 +18,8 @@ interface MainLayoutProps {
 export const MainLayout = ({children}: MainLayoutProps) => {
   return (
     <main className={`${nunito.className} relative bg-gray-100`}>
-      <Navbar />
+       <Navbar /> 
+      
       {children}
 
       <Footer />
