@@ -3,7 +3,7 @@
 export class Service {
     async getAll() {
         try {
-            const url = 'https://amae-backend-production.up.railway.app/api/services';
+            const url = `${process.env.NEXT_PUBLIC_API_URL}/api/services`;
 
             const response = await fetch(url);
             const data = await response.json();

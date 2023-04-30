@@ -1,16 +1,8 @@
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Link as LinkScroll } from "react-scroll";
-import { ScrollMore, Separator } from "@/components/Ui";
-import { SectionLightLayout, MainLayout, SectionDarkLayout } from "@/layouts";
-import { Heading } from "@/components/Ui/Heading";
-import { Icon } from "@/components/Icons";
 import { Gallery } from "@/Api/gallery";
-import { MappedGallery, galleryMapper } from "@/Api/Gallery/gallery.mapper";
-import { Section } from "@/components/Sections";
-import ScrollToTopButton from "@/components/Ui/ScrollToTop";
 import { Service } from "@/Api/service";
+import { MainLayout } from "@/layouts";
+import { ScrollToTopButton } from "@/components/Ui";
+import { Section } from "@/components/Sections";
 
 export default function Home({
   galleriesFetch,
@@ -21,7 +13,6 @@ export default function Home({
 }) {
   const { data: galleriesData } = galleriesFetch;
   const { data: serviceData } = servicesFetch;
-  
 
   return (
     <MainLayout>

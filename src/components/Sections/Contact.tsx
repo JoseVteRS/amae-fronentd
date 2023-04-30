@@ -36,6 +36,7 @@ export const Contact = () => {
                 <Link
                   href="https://www.linkedin.com/company/amae-fotograf%C3%ADa/"
                   target="_blank"
+                  title="Link a mi perfil de LinkedIn"
                 >
                   <Icon.LinkedIn className="h-8 w-8 fill-slate-700" />
                 </Link>
@@ -44,6 +45,7 @@ export const Contact = () => {
                 <Link
                   href="https://www.facebook.com/mar.fotografia.7"
                   target="_blank"
+                  title="Link a mi perfil de Facebook"
                 >
                   <Icon.Facebook className="h-8 w-8 fill-slate-700" />
                 </Link>
@@ -52,6 +54,7 @@ export const Contact = () => {
                 <Link
                   href="https://www.linkedin.com/in/mar-fotografia-7b1b1b1b9/"
                   target="_blank"
+                  title="Link a mi perfil de Instagram"
                 >
                   <Icon.Instagram className="h-8 w-8 fill-slate-700" />
                 </Link>

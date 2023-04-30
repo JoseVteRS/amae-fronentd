@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Icon } from "../Icons";
 
-const ScrollToTopButton = () => {
+export const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   // Mostrar botón después de un cierto desplazamiento (por ejemplo, 300px)
@@ -39,5 +39,3 @@ const ScrollToTopButton = () => {
     </>
   );
 };
-
-export default ScrollToTopButton;

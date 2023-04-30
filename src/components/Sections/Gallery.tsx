@@ -5,22 +5,19 @@ import Link from "next/link";
 
 export const Gallery = ({ galleries }: { galleries: any }) => {
   return (
-    <SectionLightLayout
-      title="Galerías."
-      id="galeria"
-      className="pb-52"
-    >
+    <SectionLightLayout title="Galerías." id="galeria" className="pb-52">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {galleryMapper(galleries).map((gallery: MappedGallery) => (
             <Link
               key={gallery.id}
+              title={`Ir a la galería ${gallery.title}`}
               href={"/galeria/[gallery]"}
               as={`/galeria/${gallery.slug}`}
               className="relative w-full h-48 overflow-hidden rounded shadow-md transform hover:scale-105 transition duration-300 ease-in-out"
             >
               <Image
-                src={`https://amae-backend-production.up.railway.app${gallery.thumbnail}`}
+                src={`${process.env.NEXT_PUBLIC_API_URL}${gallery.thumbnail}`}
                 alt={gallery.title}
                 fill
                 style={{ objectFit: "cover", objectPosition: "center" }}

@@ -1,8 +1,7 @@
 import { HeaderWithImage } from "@/components/Common/HeaderPage";
-import { Gallery } from "@/components/Gallery";
-import { ButtonPrimary } from "@/components/Ui";
-import { Heading } from "@/components/Ui/Heading";
+import { GalleryImage, Heading } from "@/components/Ui";
 import { MainLayout } from "@/layouts";
+import { galleryImages } from "@/utils";
 import { Abhaya_Libre } from "next/font/google";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -15,15 +14,6 @@ const abhaya = Abhaya_Libre({
   subsets: ["latin"],
   weight: ["400", "700", "800"],
 });
-
-const galleryImages = (images: []) => {
-  if (!images || images.length < 0) return [];
-  return images.map((image: any) => ({
-    src: `https://amae-backend-production.up.railway.app${image.attributes.url}`,
-    width: image.attributes.width,
-    height: image.attributes.height,
-  }));
-};
 
 const GalleryPage = ({ responseGallery }: { responseGallery: any }) => {
   const { back } = useRouter();
@@ -38,14 +28,14 @@ const GalleryPage = ({ responseGallery }: { responseGallery: any }) => {
       <MainLayout>
         <HeaderWithImage
           title={responseGallery.attributes.title}
-          imageSrc={`https://amae-backend-production.up.railway.app${responseGallery.attributes.Thumbnail?.data.attributes.url}`}
+          imageSrc={`${process.env.NEXT_PUBLIC_API_URL}${responseGallery.attributes.Thumbnail?.data.attributes.url}`}
           className="diagonal"
         />
 
         <section className="relative bg-gray-100 text-slate-300 py-28">
           <div className="container mx-auto">
             <PhotoAlbum
-              
+              renderPhoto={GalleryImage}
               layout="masonry"
               targetRowHeight={150}
               columns={3}
@@ -53,10 +43,12 @@ const GalleryPage = ({ responseGallery }: { responseGallery: any }) => {
               onClick={({ index }) => {
                 setIndex(index);
               }}
+              defaultContainerWidth={1200}
+              sizes={{ size: "calc(100vw - 240px)" }}
             />
 
             <Lightbox
-            plugins={[Zoom]}
+              plugins={[Zoom]}
               index={index}
               open={index >= 0}
               close={() => setIndex(-1)}
@@ -66,7 +58,6 @@ const GalleryPage = ({ responseGallery }: { responseGallery: any }) => {
             {responseGallery.attributes.photos.data !== null ? (
               <></>
             ) : (
-  
               <div className="grid place-content-center h-[30vh]">
                 <Heading
                   as="h2"
