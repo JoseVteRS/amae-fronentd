@@ -8,7 +8,7 @@ export const Header = () => {
       <div className="">
         <div className="relative w-full h-[100vh]">
           <Image
-            src="https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg"
+            src="/assets/images/fondo-amae.jpg"
             alt="Mar, fotógrafa"
             style={{ objectFit: "cover", objectPosition: "center" }}
             fill
