@@ -6,6 +6,7 @@ import { Phone } from './Phone';
 import { Envelope } from './Envelope';
 import { IconArrowDown } from './ArrowDown';
 import { ArrowUp } from './ArrowUp';
+import { IconMenu } from './IconMenu';
 
 
 
@@ -17,5 +18,6 @@ export const Icon = {
     Phone,
     Envelope,
     ArrowDown: IconArrowDown,
-    ArrowUp
+    ArrowUp,
+    IconMenu
 }

@@ -33,7 +33,7 @@ export const Navbar = () => {
     className={``}
   >
     <div className="">
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex items-center justify-between px-5">
         <div>
           <Link to="/" className="text-2xl font-bold">
             <Logo />
