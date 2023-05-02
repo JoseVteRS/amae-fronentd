@@ -13,7 +13,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ links }) => {
 
   return (
     <div className="relative">
-      <button type="button" className="block" onClick={toggleMenu}>
+      <button type="button" aria-label="Menu" className="block" onClick={toggleMenu}>
+      <span className="sr-only">Open menu</span>
         <Icon.IconMenu className="w-5 h-5" />
       </button>
 

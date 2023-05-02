@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
             scroll-behavior: smooth;
           }
         `}</style>
+        <title>Amae | Fotógrafa profesional</title>
       </Head>
       <Component {...pageProps} />
     </>
